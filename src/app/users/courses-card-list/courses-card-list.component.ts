@@ -5,10 +5,11 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import {filter, tap} from 'rxjs/operators';
 import {MatCardModule} from '@angular/material/card';
 import { Router, RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'courses-card-list',
-    imports:[MatCardModule, RouterLink],
+    imports:[MatCardModule, RouterLink, CommonModule],
     templateUrl: './courses-card-list.component.html',
     styleUrls: ['./courses-card-list.component.css'],
     standalone: true

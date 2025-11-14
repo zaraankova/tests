@@ -12,3 +12,7 @@
 .course-actions button {
   margin-right: 5px;
 }
+.mat-mdc-card{
+  max-width: 400px;
+
+}

@@ -12,7 +12,10 @@ import {Lesson} from "../model/lesson";
   providedIn: 'root'
 })
 export class CoursesService {
-
+headers = new Headers({
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+});
     
 http=inject(HttpClient);
 
@@ -21,7 +24,10 @@ http=inject(HttpClient);
     }
 
     findAllCourses(): Observable<Course[]> {
-        return this.http.get<{ payload: Course[] }>('/api/courses')
+        return this.http.get<{ payload: Course[] }>('/api/courses', {
+            headers: { 'Content-Type': 'application/json',
+    "Accept": "application/json" }
+        })
             .pipe(
                 map(res => res.payload)
             );
